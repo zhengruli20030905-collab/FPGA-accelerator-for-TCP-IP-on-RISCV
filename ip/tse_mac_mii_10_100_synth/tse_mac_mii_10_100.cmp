@@ -1,0 +1,43 @@
+	component tse_mac_mii_10_100 is
+		port (
+			clk          : in  std_logic                     := 'X';             -- clk
+			reset        : in  std_logic                     := 'X';             -- reset
+			reg_addr     : in  std_logic_vector(7 downto 0)  := (others => 'X'); -- address
+			reg_data_out : out std_logic_vector(31 downto 0);                    -- readdata
+			reg_rd       : in  std_logic                     := 'X';             -- read
+			reg_data_in  : in  std_logic_vector(31 downto 0) := (others => 'X'); -- writedata
+			reg_wr       : in  std_logic                     := 'X';             -- write
+			reg_busy     : out std_logic;                                        -- waitrequest
+			tx_clk       : in  std_logic                     := 'X';             -- clk
+			rx_clk       : in  std_logic                     := 'X';             -- clk
+			set_10       : in  std_logic                     := 'X';             -- set_10
+			set_1000     : in  std_logic                     := 'X';             -- set_1000
+			eth_mode     : out std_logic;                                        -- eth_mode
+			ena_10       : out std_logic;                                        -- ena_10
+			m_rx_d       : in  std_logic_vector(3 downto 0)  := (others => 'X'); -- mii_rx_d
+			m_rx_en      : in  std_logic                     := 'X';             -- mii_rx_dv
+			m_rx_err     : in  std_logic                     := 'X';             -- mii_rx_err
+			m_tx_d       : out std_logic_vector(3 downto 0);                     -- mii_tx_d
+			m_tx_en      : out std_logic;                                        -- mii_tx_en
+			m_tx_err     : out std_logic;                                        -- mii_tx_err
+			m_rx_crs     : in  std_logic                     := 'X';             -- mii_crs
+			m_rx_col     : in  std_logic                     := 'X';             -- mii_col
+			ff_rx_clk    : in  std_logic                     := 'X';             -- clk
+			ff_tx_clk    : in  std_logic                     := 'X';             -- clk
+			ff_rx_data   : out std_logic_vector(31 downto 0);                    -- data
+			ff_rx_eop    : out std_logic;                                        -- endofpacket
+			rx_err       : out std_logic_vector(5 downto 0);                     -- error
+			ff_rx_mod    : out std_logic_vector(1 downto 0);                     -- empty
+			ff_rx_rdy    : in  std_logic                     := 'X';             -- ready
+			ff_rx_sop    : out std_logic;                                        -- startofpacket
+			ff_rx_dval   : out std_logic;                                        -- valid
+			ff_tx_data   : in  std_logic_vector(31 downto 0) := (others => 'X'); -- data
+			ff_tx_eop    : in  std_logic                     := 'X';             -- endofpacket
+			ff_tx_err    : in  std_logic                     := 'X';             -- error
+			ff_tx_mod    : in  std_logic_vector(1 downto 0)  := (others => 'X'); -- empty
+			ff_tx_rdy    : out std_logic;                                        -- ready
+			ff_tx_sop    : in  std_logic                     := 'X';             -- startofpacket
+			ff_tx_wren   : in  std_logic                     := 'X'              -- valid
+		);
+	end component tse_mac_mii_10_100;
+

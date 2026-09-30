@@ -1,0 +1,22 @@
+﻿{
+    "Timestamp":  "2026-09-19T20:13:35.3335316+08:00",
+    "Mode":  "UDP_ECHO",
+    "TargetIp":  "192.168.1.50",
+    "Port":  1234,
+    "IoMode":  "SGDMA",
+    "ChecksumMode":  "HARDWARE",
+    "PayloadBytes":  1472,
+    "TargetRatePps":  4300,
+    "DurationSeconds":  60,
+    "Sent":  258000,
+    "UniqueReplies":  257969,
+    "Lost":  31,
+    "LossPercent":  0.012015503875968992,
+    "BadReplies":  0,
+    "SendErrors":  0,
+    "ReceiveErrors":  0,
+    "LateSchedules":  181,
+    "ReplyPps":  4299.4833333333336,
+    "ReplyPayloadGoodputMbps":  50.630715733333332,
+    "FullPayloadCheck":  false
+}

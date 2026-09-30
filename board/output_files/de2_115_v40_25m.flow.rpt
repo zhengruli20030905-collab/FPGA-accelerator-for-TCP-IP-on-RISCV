@@ -1,0 +1,145 @@
+Flow report for de2_115_v40_25m
+Tue Sep 15 17:16:16 2026
+Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2024  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------------+
+; Flow Summary                                                                        ;
++------------------------------------+------------------------------------------------+
+; Flow Status                        ; Successful - Tue Sep 15 17:16:00 2026          ;
+; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
+; Revision Name                      ; de2_115_v40_25m                                ;
+; Top-level Entity Name              ; board_top_de2115                               ;
+; Family                             ; Cyclone IV E                                   ;
+; Device                             ; EP4CE115F29C7                                  ;
+; Timing Models                      ; Final                                          ;
+; Total logic elements               ; 20,609 / 114,480 ( 18 % )                      ;
+;     Total combinational functions  ; 18,438 / 114,480 ( 16 % )                      ;
+;     Dedicated logic registers      ; 8,646 / 114,480 ( 8 % )                        ;
+; Total registers                    ; 8646                                           ;
+; Total pins                         ; 76 / 529 ( 14 % )                              ;
+; Total virtual pins                 ; 0                                              ;
+; Total memory bits                  ; 1,856,496 / 3,981,312 ( 47 % )                 ;
+; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                                ;
+; Total PLLs                         ; 1 / 4 ( 25 % )                                 ;
++------------------------------------+------------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 09/15/2026 17:06:47 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; de2_115_v40_25m     ;
++-------------------+---------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                         ;
++-----------------------------------------+------------------------------------------------------------+-----------------+--------------------+------------+
+; Assignment Name                         ; Value                                                      ; Default Value   ; Entity Name        ; Section Id ;
++-----------------------------------------+------------------------------------------------------------+-----------------+--------------------+------------+
+; COMPILER_SIGNATURE_ID                   ; 4681959465651.178946320715804                              ; --              ; --                 ; --         ;
+; FITTER_EFFORT                           ; Standard Fit                                               ; Auto Fit        ; --                 ; --         ;
+; MISC_FILE                               ; ../ip/tse_mac_mii_10_100_synth/tse_mac_mii_10_100.cmp      ; --              ; --                 ; --         ;
+; MISC_FILE                               ; ../software/boardprep_imem.hex                             ; --              ; --                 ; --         ;
+; MISC_FILE                               ; ../software/boardprep_imem.mif                             ; --              ; --                 ; --         ;
+; MISC_FILE                               ; ../software/boardprep_dmem.hex                             ; --              ; --                 ; --         ;
+; MISC_FILE                               ; ../software/boardprep_dmem.mif                             ; --              ; --                 ; --         ;
+; NUM_PARALLEL_PROCESSORS                 ; 1                                                          ; --              ; --                 ; --         ;
+; PHYSICAL_SYNTHESIS_COMBO_LOGIC          ; On                                                         ; Off             ; --                 ; --         ;
+; PHYSICAL_SYNTHESIS_EFFORT               ; Extra                                                      ; Normal          ; --                 ; --         ;
+; PHYSICAL_SYNTHESIS_REGISTER_DUPLICATION ; On                                                         ; Off             ; --                 ; --         ;
+; PHYSICAL_SYNTHESIS_REGISTER_RETIMING    ; On                                                         ; Off             ; --                 ; --         ;
+; PLACEMENT_EFFORT_MULTIPLIER             ; 5.0                                                        ; 1.0             ; --                 ; --         ;
+; PROJECT_OUTPUT_DIRECTORY                ; output_files                                               ; --              ; --                 ; --         ;
+; ROUTER_EFFORT_MULTIPLIER                ; 2.0                                                        ; 1.0             ; --                 ; --         ;
+; SEARCH_PATH                             ; ../rtl/include                                             ; --              ; --                 ; --         ;
+; SEARCH_PATH                             ; ../rtl/cpu                                                 ; --              ; --                 ; --         ;
+; SEARCH_PATH                             ; ../rtl/soc                                                 ; --              ; --                 ; --         ;
+; SEARCH_PATH                             ; ../rtl/memory                                              ; --              ; --                 ; --         ;
+; SEARCH_PATH                             ; ../rtl/peripherals                                         ; --              ; --                 ; --         ;
+; SEARCH_PATH                             ; ../rtl/eth                                                 ; --              ; --                 ; --         ;
+; SEARCH_PATH                             ; ../rtl/common                                              ; --              ; --                 ; --         ;
+; SEARCH_PATH                             ; ../software                                                ; --              ; --                 ; --         ;
+; SEED                                    ; 2                                                          ; 1               ; --                 ; --         ;
+; SLD_INFO                                ; QSYS_NAME tse_mac_mii_10_100 HAS_SOPCINFO 1                ; --              ; tse_mac_mii_10_100 ; --         ;
+; SOPCINFO_FILE                           ; ../ip/tse_mac_mii_10_100_synth/tse_mac_mii_10_100.sopcinfo ; --              ; --                 ; --         ;
+; SYNTHESIS_ONLY_QIP                      ; On                                                         ; --              ; --                 ; --         ;
+; TOP_LEVEL_ENTITY                        ; board_top_de2115                                           ; de2_115_v40_25m ; --                 ; --         ;
+; VERILOG_MACRO                           ; BOARD_DE2115=1                                             ; --              ; --                 ; --         ;
++-----------------------------------------+------------------------------------------------------------+-----------------+--------------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:02:36     ; 1.0                     ; 5563 MB             ; 00:01:50                           ;
+; Fitter               ; 00:06:20     ; 1.0                     ; 5633 MB             ; 00:06:19                           ;
+; Assembler            ; 00:00:06     ; 1.0                     ; 5075 MB             ; 00:00:05                           ;
+; Timing Analyzer      ; 00:00:15     ; 1.0                     ; 5105 MB             ; 00:00:13                           ;
+; Total                ; 00:09:17     ; --                      ; --                  ; 00:08:27                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                    ;
++----------------------+------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++----------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis ; LAPTOP-TCD26S6F  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; LAPTOP-TCD26S6F  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; LAPTOP-TCD26S6F  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; LAPTOP-TCD26S6F  ; Windows 10 ; 10.0       ; x86_64         ;
++----------------------+------------------+------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off de2_115_v40_25m -c de2_115_v40_25m
+quartus_fit --read_settings_files=off --write_settings_files=off de2_115_v40_25m -c de2_115_v40_25m
+quartus_asm --read_settings_files=off --write_settings_files=off de2_115_v40_25m -c de2_115_v40_25m
+quartus_sta de2_115_v40_25m -c de2_115_v40_25m
+
+
+

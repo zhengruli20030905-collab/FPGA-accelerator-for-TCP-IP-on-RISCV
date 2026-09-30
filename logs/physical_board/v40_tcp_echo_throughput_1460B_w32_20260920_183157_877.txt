@@ -1,0 +1,47 @@
+﻿
+
+Timestamp                    : 2026-09-20T18:32:59.1515207+08:00
+Mode                         : TCP_ECHO_PIPELINED
+IoMode                       : SGDMA
+ChecksumMode                 : HARDWARE
+BoardIp                      : 192.168.1.50
+LocalIp                      : 192.168.1.10
+Port                         : 5001
+ChunkBytes                   : 1460
+WindowChunks                 : 32
+InitialReadDelayMilliseconds : 0
+ReadPauseAtSeconds           : 0
+ReadPauseMilliseconds        : 0
+DurationSeconds              : 60
+ActualWindowSeconds          : 60.0115258
+SentChunks                   : 91629
+SentBytes                    : 133778340
+EchoedChunks                 : 91629
+EchoedBytes                  : 133778340
+WindowEchoedChunks           : 91597
+WindowEchoedBytes            : 133731620
+WindowGoodputMbps            : 17.8308826666667
+OfferedPayloadMbps           : 17.837112
+EchoPayloadGoodputMbps       : 17.837112
+CompletionGoodputMbps        : 17.8292053120356
+TotalElapsedSeconds          : 60.0266081
+DrainElapsedSeconds          : 0.0148944
+OutstandingBytesAtClose      : 0
+MaxObservedOutstandingBytes  : 46720
+BadChunks                    : 0
+SequenceGaps                 : 0
+Duplicates                   : 0
+OutOfOrder                   : 0
+PartialBytesAtClose          : 0
+ReadErrors                   : 0
+WriteErrors                  : 0
+RemoteClosed                 : False
+AllEchoed                    : True
+PayloadValidation            : MAGIC_AND_SEQUENCE
+FullPayloadCheck             : False
+PhysicalBoardPass            : True
+BoardCounterEvidence         : Read UART delta: TCP_RX/TCP_TX, PATH_RX/PATH_TX, SG TX/RX
+
+
+
+

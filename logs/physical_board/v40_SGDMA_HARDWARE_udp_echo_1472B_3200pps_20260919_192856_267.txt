@@ -1,0 +1,26 @@
+﻿
+
+Timestamp               : 2026-09-19T19:29:08.4531426+08:00
+Mode                    : UDP_ECHO
+TargetIp                : 192.168.1.50
+Port                    : 1234
+IoMode                  : SGDMA
+ChecksumMode            : HARDWARE
+PayloadBytes            : 1472
+TargetRatePps           : 3200
+DurationSeconds         : 10
+Sent                    : 32000
+UniqueReplies           : 32000
+Lost                    : 0
+LossPercent             : 0
+BadReplies              : 0
+SendErrors              : 0
+ReceiveErrors           : 0
+LateSchedules           : 109
+ReplyPps                : 3200
+ReplyPayloadGoodputMbps : 37.6832
+FullPayloadCheck        : False
+
+
+
+

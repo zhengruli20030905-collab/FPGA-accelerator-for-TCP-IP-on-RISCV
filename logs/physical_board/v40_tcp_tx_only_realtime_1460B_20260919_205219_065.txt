@@ -1,0 +1,31 @@
+﻿
+
+Timestamp            : 2026-09-19T20:52:31.5632557+08:00
+Mode                 : TCP_TX_ONLY
+IoMode               : SGDMA
+ChecksumMode         : HARDWARE
+BoardIp              : 192.168.1.50
+LocalIp              : 192.168.1.10
+Port                 : 5001
+ChunkBytes           : 1460
+DurationSeconds      : 10
+CompleteChunks       : 0
+CompletePayloadBytes : 0
+SocketReceivedBytes  : 20092520
+ReceivePps           : 0
+PayloadGoodputMbps   : 0
+FirstSequence        : 
+LastSequence         : 
+SequenceGaps         : 0
+BadChunks            : 13762
+Duplicates           : 0
+OutOfOrder           : 0
+PartialBytesAtClose  : 0
+ReceiveErrors        : 0
+FullPayloadCheck     : False
+ConnectionMode       : ONE_PERSISTENT_CONNECTION
+SlotReleaseEvidence  : Read UART delta: TX_TCP_POOL ACK_BYTES/UNACKED/ACK_CB
+
+
+
+

@@ -1,0 +1,26 @@
+﻿
+
+Timestamp            : 2026-09-19T20:28:43.3109223+08:00
+Mode                 : UDP_RX_ONLY
+IoMode               : SGDMA
+ChecksumMode         : HARDWARE
+TargetIp             : 192.168.1.50
+Port                 : 1234
+PayloadBytes         : 1472
+TargetRatePps        : 8000
+DurationSeconds      : 10
+TargetPackets        : 80000
+Scheduled            : 80000
+Sent                 : 80000
+SendErrors           : 0
+UnexpectedReplies    : 0
+ReceiveErrors        : 0
+LateSchedules        : 216
+ActualSendPps        : 8000
+OfferedPayloadMbps   : 94.208
+BoardAcceptedPackets : Read UART delta: UDP_SINK
+BoardAcceptedBytes   : Read UART delta: UDP_RX_BYTES
+
+
+
+

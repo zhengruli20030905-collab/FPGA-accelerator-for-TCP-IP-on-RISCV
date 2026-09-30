@@ -1,0 +1,14 @@
+scripts\audit_v40_timing_structure.ps1
+scripts\audit_v40_independence.ps1
+scripts\build_v40_firmware.ps1
+scripts\run_v40_tx_pool_host_test.ps1
+scripts\run_v40_tcp_zero_copy_host_test.ps1
+scripts\run_v40_peripheral_timing_sim.ps1
+scripts\run_v40_cpu_sim.ps1 -Seed 3701 -SkipBuild
+scripts\run_v40_dma_sim.ps1 -Seeds 3701,3702,3718
+PIO network regression
+SGDMA software-checksum network regression
+SGDMA hardware-checksum network regression
+SGDMA hardware-checksum TCP RX-only regression
+scripts\run_v40_quartus.ps1 -ReportsOnly
+final v39 hash and v40 independence audit

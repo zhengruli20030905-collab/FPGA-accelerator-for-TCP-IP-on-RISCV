@@ -1,0 +1,22 @@
+﻿{
+    "Timestamp":  "2026-09-19T20:41:51.4284255+08:00",
+    "Mode":  "UDP_RX_ONLY",
+    "IoMode":  "SGDMA",
+    "ChecksumMode":  "HARDWARE",
+    "TargetIp":  "192.168.1.50",
+    "Port":  1234,
+    "PayloadBytes":  1472,
+    "TargetRatePps":  8100,
+    "DurationSeconds":  60,
+    "TargetPackets":  486000,
+    "Scheduled":  486000,
+    "Sent":  486000,
+    "SendErrors":  0,
+    "UnexpectedReplies":  0,
+    "ReceiveErrors":  0,
+    "LateSchedules":  1527,
+    "ActualSendPps":  8100,
+    "OfferedPayloadMbps":  95.3856,
+    "BoardAcceptedPackets":  "Read UART delta: UDP_SINK",
+    "BoardAcceptedBytes":  "Read UART delta: UDP_RX_BYTES"
+}

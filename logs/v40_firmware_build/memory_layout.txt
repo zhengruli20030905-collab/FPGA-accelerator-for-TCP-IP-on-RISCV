@@ -1,0 +1,13 @@
+00001b40 B __bss_start
+00001b44 00009183 b memp_memory_PBUF_POOL_base
+0000b4a8 00000200 b rx_descriptor_meta
+0000b6b0 00000200 b rx_descriptor_ring
+0000b8b0 00000200 b tx_descriptor_meta
+0000bab0 00000200 b tx_descriptor_ring
+0000bcb8 00000800 b pio_tx_words
+0000c5c4 000000e0 b rx_frames
+0000c6b4 00006013 b ram_heap
+00012b00 00000800 b pio_rx_words
+00016940 B __bss_end
+0001f000 A __stack_limit
+0001fff0 A __stack_top

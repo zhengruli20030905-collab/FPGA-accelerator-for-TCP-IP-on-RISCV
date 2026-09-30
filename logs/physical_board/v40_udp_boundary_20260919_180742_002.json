@@ -1,0 +1,79 @@
+﻿[
+    {
+        "Length":  1,
+        "Iterations":  3,
+        "Passed":  3,
+        "Result":  "PASS",
+        "Failure":  ""
+    },
+    {
+        "Length":  2,
+        "Iterations":  3,
+        "Passed":  3,
+        "Result":  "PASS",
+        "Failure":  ""
+    },
+    {
+        "Length":  3,
+        "Iterations":  3,
+        "Passed":  3,
+        "Result":  "PASS",
+        "Failure":  ""
+    },
+    {
+        "Length":  4,
+        "Iterations":  3,
+        "Passed":  3,
+        "Result":  "PASS",
+        "Failure":  ""
+    },
+    {
+        "Length":  5,
+        "Iterations":  3,
+        "Passed":  3,
+        "Result":  "PASS",
+        "Failure":  ""
+    },
+    {
+        "Length":  60,
+        "Iterations":  3,
+        "Passed":  3,
+        "Result":  "PASS",
+        "Failure":  ""
+    },
+    {
+        "Length":  64,
+        "Iterations":  3,
+        "Passed":  3,
+        "Result":  "PASS",
+        "Failure":  ""
+    },
+    {
+        "Length":  511,
+        "Iterations":  3,
+        "Passed":  3,
+        "Result":  "PASS",
+        "Failure":  ""
+    },
+    {
+        "Length":  512,
+        "Iterations":  3,
+        "Passed":  3,
+        "Result":  "PASS",
+        "Failure":  ""
+    },
+    {
+        "Length":  513,
+        "Iterations":  3,
+        "Passed":  3,
+        "Result":  "PASS",
+        "Failure":  ""
+    },
+    {
+        "Length":  1472,
+        "Iterations":  3,
+        "Passed":  3,
+        "Result":  "PASS",
+        "Failure":  ""
+    }
+]

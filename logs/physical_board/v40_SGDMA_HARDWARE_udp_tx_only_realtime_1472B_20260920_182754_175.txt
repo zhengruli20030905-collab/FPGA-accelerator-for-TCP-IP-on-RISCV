@@ -1,0 +1,31 @@
+﻿
+
+Timestamp             : 2026-09-20T18:28:56.4787441+08:00
+Mode                  : UDP_TX_ONLY
+IoMode                : SGDMA
+ChecksumMode          : HARDWARE
+BoardIp               : 192.168.1.50
+LocalIp               : 192.168.1.10
+ListenPort            : 4321
+PayloadBytes          : 1472
+DurationSeconds       : 60
+UniquePackets         : 103084
+ReceivePps            : 1718.06666666667
+PayloadGoodputMbps    : 20.2319530666667
+FirstSequence         : 0
+LastSequence          : 103083
+SequenceGaps          : 0
+LeadingSequenceGaps   : 0
+InternalSequenceGaps  : 0
+BadPackets            : 0
+Duplicates            : 0
+OutOfOrder            : 0
+ReceiveErrors         : 0
+FullPayloadCheck      : False
+PayloadMode           : REALTIME_SEQUENCE_DEPENDENT
+BoardGeneratedPackets : Read UART delta: UDP_TX_GEN
+BoardWireFrames       : Read UART delta: PATH_TX MII
+
+
+
+

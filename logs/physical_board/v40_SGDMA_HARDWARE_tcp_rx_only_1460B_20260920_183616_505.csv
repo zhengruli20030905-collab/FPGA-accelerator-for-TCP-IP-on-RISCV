@@ -1,0 +1,2 @@
+"Timestamp","Mode","IoMode","ChecksumMode","BoardIp","LocalIp","Port","ChunkBytes","BatchChunks","DurationSeconds","SocketSubmittedBytes","SocketSubmittedChunks","SourcePayloadGoodputMbps","SendErrors","UnexpectedApplicationBytes","ReceiveErrors","BoardAcceptedBytes","BoardTransmittedPayloadBytes"
+"2026-09-20T18:37:17.6197433+08:00","TCP_RX_ONLY","SGDMA","HARDWARE","192.168.1.50","192.168.1.10","5001","1460","32","60","356567040","244224","47.542272","0","0","0","Read UART delta: TCP_RX","Read UART delta: TCP_TX; expected 0"

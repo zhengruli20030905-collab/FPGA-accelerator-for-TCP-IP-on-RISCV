@@ -1,0 +1,2 @@
+"TestMode","Mode","ChecksumMode","Profile","Seed","Descriptors","CpuTxStarts","MaxPending","TailWrites","Result","Log"
+"0","1","1","0","3706","19","0","0","0","PASS","E:\RISC-V\RISC-V_version40_tcp_zero_copy_ack_lifetime\logs\v40_tcp_rx_sink_sim\test_0_mode_1_csum_1_profile_0_seed_3706.log"

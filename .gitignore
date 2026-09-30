@@ -1,0 +1,9 @@
+/build/
+/board/db/
+/board/incremental_db/
+*.wlf
+*.vcd
+*.bak
+*.tmp
+transcript
+vsim.wlf

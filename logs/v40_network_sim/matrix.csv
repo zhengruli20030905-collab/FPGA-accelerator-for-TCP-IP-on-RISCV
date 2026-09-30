@@ -1,0 +1,5 @@
+"TestMode","Mode","ChecksumMode","Profile","Seed","Descriptors","CpuTxStarts","MaxPending","TailWrites","Result","Log"
+"0","1","1","0","3705","84","0","12","55","PASS","E:\RISC-V\RISC-V_version40_tcp_zero_copy_ack_lifetime\logs\v40_network_sim\test_0_mode_1_csum_1_profile_0_seed_3705.log"
+"1","1","1","0","3705","6","0","0","0","PASS","E:\RISC-V\RISC-V_version40_tcp_zero_copy_ack_lifetime\logs\v40_network_sim\test_1_mode_1_csum_1_profile_0_seed_3705.log"
+"2","1","1","0","3705","15","0","0","0","PASS","E:\RISC-V\RISC-V_version40_tcp_zero_copy_ack_lifetime\logs\v40_network_sim\test_2_mode_1_csum_1_profile_0_seed_3705.log"
+"3","1","1","0","3705","228","0","0","0","PASS","E:\RISC-V\RISC-V_version40_tcp_zero_copy_ack_lifetime\logs\v40_network_sim\test_3_mode_1_csum_1_profile_0_seed_3705.log"

@@ -1,0 +1,2 @@
+"Timestamp","Mode","TargetIp","Port","IoMode","ChecksumMode","PayloadBytes","TargetRatePps","DurationSeconds","Sent","UniqueReplies","Lost","LossPercent","BadReplies","SendErrors","ReceiveErrors","LateSchedules","ReplyPps","ReplyPayloadGoodputMbps","FullPayloadCheck"
+"2026-09-19T18:32:12.7884222+08:00","UDP_ECHO","192.168.1.50","1234","SGDMA","HARDWARE","1472","1600","10","16000","15999","1","0.00625","0","0","0","0","1599.9","18.8404224","False"

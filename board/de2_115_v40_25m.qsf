@@ -1,0 +1,238 @@
+# V40 formal 25 MHz board build: DE2-115 / Cyclone IV EP4CE115.
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE115F29C7
+set_global_assignment -name TOP_LEVEL_ENTITY board_top_de2115
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13.1
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name NUM_PARALLEL_PROCESSORS 1
+set_global_assignment -name FITTER_EFFORT "STANDARD FIT"
+set_global_assignment -name SEED 2
+set_global_assignment -name PLACEMENT_EFFORT_MULTIPLIER 5.0
+set_global_assignment -name ROUTER_EFFORT_MULTIPLIER 2.0
+set_global_assignment -name PHYSICAL_SYNTHESIS_COMBO_LOGIC ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_REGISTER_DUPLICATION ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_REGISTER_RETIMING ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_EFFORT EXTRA
+set_global_assignment -name VERILOG_MACRO "BOARD_DE2115=1"
+set_global_assignment -name SEARCH_PATH ../rtl/include
+set_global_assignment -name SEARCH_PATH ../rtl/cpu
+set_global_assignment -name SEARCH_PATH ../rtl/soc
+set_global_assignment -name SEARCH_PATH ../rtl/memory
+set_global_assignment -name SEARCH_PATH ../rtl/peripherals
+set_global_assignment -name SEARCH_PATH ../rtl/eth
+set_global_assignment -name SEARCH_PATH ../rtl/common
+set_global_assignment -name SEARCH_PATH ../software
+
+set_global_assignment -name SDC_FILE de2_115_v40_25m.sdc
+set_global_assignment -name QIP_FILE ../ip/tse_mac_mii_10_100_synth/tse_mac_mii_10_100.qip
+
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/include/soc_addr_map.svh
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/include/tse_addr_map.svh
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/include/v40_clock_config.svh
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/common/reset_sync.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/common/sync_2ff.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/common/debounce.sv
+set_global_assignment -name VERILOG_FILE ../rtl/common/cpu_pll_25m.v
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/cpu/alu.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/cpu/control_unit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/cpu/extention.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/cpu/mutiplexer.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/cpu/mult.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/cpu/rf.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/cpu/IF_Stage.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/cpu/ID_Stage.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/cpu/EX_stage.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/cpu/Mem_stage.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/cpu/WB_Stage.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/cpu/instruct_mem.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/memory/data_ram.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/soc/simple_bus.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/peripherals/uart_tx_hw.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/peripherals/uart_mmio.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/peripherals/timer_mmio.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/peripherals/board_gpio_mmio.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/peripherals/mdio_master.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/peripherals/phy_mdio_mmio.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/eth/tse_mmio_regs.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/eth/dma_transfer_engine.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/eth/internet_checksum_engine.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/eth/sgdma_descriptor_engine.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/eth/packet_dma.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/eth/tse_stream_fifo_stub.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/eth/tse_mac_wrapper.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/eth/tse_mii_debug_monitor.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/eth/tse_stream_byte_order_adapter.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/eth/tse_mii_board_if.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/soc/data_mem.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/cpu/rv32i_cpu.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/soc/board_top_de2115.sv
+
+set_global_assignment -name MISC_FILE ../software/boardprep_imem.hex
+set_global_assignment -name MISC_FILE ../software/boardprep_imem.mif
+set_global_assignment -name MISC_FILE ../software/boardprep_dmem.hex
+set_global_assignment -name MISC_FILE ../software/boardprep_dmem.mif
+
+set_location_assignment PIN_Y2 -to CLOCK_50
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK_50
+
+set_location_assignment PIN_G9 -to UART_TXD
+set_location_assignment PIN_G12 -to UART_RXD
+set_location_assignment PIN_G14 -to UART_CTS
+set_location_assignment PIN_J13 -to UART_RTS
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to UART_TXD
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to UART_RXD
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to UART_CTS
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to UART_RTS
+
+set_location_assignment PIN_C20 -to ENET0_MDC
+set_location_assignment PIN_B21 -to ENET0_MDIO
+set_location_assignment PIN_C19 -to ENET0_RST_N
+set_location_assignment PIN_A21 -to ENET0_INT_N
+set_location_assignment PIN_C14 -to ENET0_LINK100
+set_location_assignment PIN_A17 -to ENET0_GTX_CLK
+set_location_assignment PIN_B17 -to ENET0_TX_CLK
+set_location_assignment PIN_C18 -to ENET0_TX_DATA[0]
+set_location_assignment PIN_D19 -to ENET0_TX_DATA[1]
+set_location_assignment PIN_A19 -to ENET0_TX_DATA[2]
+set_location_assignment PIN_B19 -to ENET0_TX_DATA[3]
+set_location_assignment PIN_A18 -to ENET0_TX_EN
+set_location_assignment PIN_B18 -to ENET0_TX_ER
+set_location_assignment PIN_A15 -to ENET0_RX_CLK
+set_location_assignment PIN_C16 -to ENET0_RX_DATA[0]
+set_location_assignment PIN_D16 -to ENET0_RX_DATA[1]
+set_location_assignment PIN_D17 -to ENET0_RX_DATA[2]
+set_location_assignment PIN_C15 -to ENET0_RX_DATA[3]
+set_location_assignment PIN_C17 -to ENET0_RX_DV
+set_location_assignment PIN_D18 -to ENET0_RX_ER
+set_location_assignment PIN_D15 -to ENET0_RX_CRS
+set_location_assignment PIN_E15 -to ENET0_RX_COL
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET0_MDC
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET0_MDIO
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET0_RST_N
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET0_INT_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ENET0_LINK100
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET0_GTX_CLK
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET0_TX_CLK
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET0_TX_DATA[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET0_TX_DATA[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET0_TX_DATA[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET0_TX_DATA[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET0_TX_EN
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET0_TX_ER
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET0_RX_CLK
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET0_RX_DATA[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET0_RX_DATA[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET0_RX_DATA[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET0_RX_DATA[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET0_RX_DV
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET0_RX_ER
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET0_RX_CRS
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET0_RX_COL
+
+set_location_assignment PIN_AB28 -to SW[0]
+set_location_assignment PIN_AC28 -to SW[1]
+set_location_assignment PIN_AC27 -to SW[2]
+set_location_assignment PIN_AD27 -to SW[3]
+set_location_assignment PIN_AB27 -to SW[4]
+set_location_assignment PIN_AC26 -to SW[5]
+set_location_assignment PIN_AD26 -to SW[6]
+set_location_assignment PIN_AB26 -to SW[7]
+set_location_assignment PIN_AC25 -to SW[8]
+set_location_assignment PIN_AB25 -to SW[9]
+set_location_assignment PIN_AC24 -to SW[10]
+set_location_assignment PIN_AB24 -to SW[11]
+set_location_assignment PIN_AB23 -to SW[12]
+set_location_assignment PIN_AA24 -to SW[13]
+set_location_assignment PIN_AA23 -to SW[14]
+set_location_assignment PIN_AA22 -to SW[15]
+set_location_assignment PIN_Y24 -to SW[16]
+set_location_assignment PIN_Y23 -to SW[17]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SW[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SW[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SW[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SW[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SW[4]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SW[5]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SW[6]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SW[7]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SW[8]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SW[9]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SW[10]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SW[11]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SW[12]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SW[13]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SW[14]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SW[15]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SW[16]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SW[17]
+
+set_location_assignment PIN_M23 -to KEY[0]
+set_location_assignment PIN_M21 -to KEY[1]
+set_location_assignment PIN_N21 -to KEY[2]
+set_location_assignment PIN_R24 -to KEY[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to KEY[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to KEY[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to KEY[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to KEY[3]
+
+set_location_assignment PIN_G19 -to LEDR[0]
+set_location_assignment PIN_F19 -to LEDR[1]
+set_location_assignment PIN_E19 -to LEDR[2]
+set_location_assignment PIN_F21 -to LEDR[3]
+set_location_assignment PIN_F18 -to LEDR[4]
+set_location_assignment PIN_E18 -to LEDR[5]
+set_location_assignment PIN_J19 -to LEDR[6]
+set_location_assignment PIN_H19 -to LEDR[7]
+set_location_assignment PIN_J17 -to LEDR[8]
+set_location_assignment PIN_G17 -to LEDR[9]
+set_location_assignment PIN_J15 -to LEDR[10]
+set_location_assignment PIN_H16 -to LEDR[11]
+set_location_assignment PIN_J16 -to LEDR[12]
+set_location_assignment PIN_H17 -to LEDR[13]
+set_location_assignment PIN_F15 -to LEDR[14]
+set_location_assignment PIN_G15 -to LEDR[15]
+set_location_assignment PIN_G16 -to LEDR[16]
+set_location_assignment PIN_H15 -to LEDR[17]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDR[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDR[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDR[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDR[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDR[4]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDR[5]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDR[6]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDR[7]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDR[8]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDR[9]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDR[10]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDR[11]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDR[12]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDR[13]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDR[14]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDR[15]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDR[16]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDR[17]
+
+set_location_assignment PIN_E21 -to LEDG[0]
+set_location_assignment PIN_E22 -to LEDG[1]
+set_location_assignment PIN_E25 -to LEDG[2]
+set_location_assignment PIN_E24 -to LEDG[3]
+set_location_assignment PIN_H21 -to LEDG[4]
+set_location_assignment PIN_G20 -to LEDG[5]
+set_location_assignment PIN_G22 -to LEDG[6]
+set_location_assignment PIN_G21 -to LEDG[7]
+set_location_assignment PIN_F17 -to LEDG[8]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDG[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDG[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDG[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDG[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDG[4]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDG[5]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDG[6]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDG[7]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDG[8]
+
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"
+
+set_global_assignment -name LAST_QUARTUS_VERSION "23.1std.1 Lite Edition"
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"
